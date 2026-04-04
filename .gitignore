@@ -1,0 +1,14 @@
+.env
+__pycache__/*
+
+/allure-results/*
+/allure-report/data/*
+/allure-report/data/attachments/*
+/allure-results/data/test-case/*
+allure-results/
+allure-report/
+
+
+/allure-results/environment.properties
+*.pyc
+__pycache__/
