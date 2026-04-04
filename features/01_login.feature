@@ -13,4 +13,4 @@ Examples:
   | invalid@example.com | wrongpass  | login_page  |
   | " "                  | admin123   | login_page  |
   | admin@example.com   | " "         | login_page  |
-  | johndoe@example.com | password   | dashboard   |
+  | rahul.employee@test.com | Employee@123   | dashboard   |

@@ -8,7 +8,7 @@ from utils.env_config import env_config
 class LoginPage:
     USERNAME_INPUT_LOCATOR = "//input[@type='email']"
     PASSWORD_INPUT_LOCATOR = "//input[@type='password']"
-    LOGIN_BUTTON_LOCATOR = "//button[normalize-space()='SIGN IN']"
+    LOGIN_BUTTON_LOCATOR = "//button[@type='submit']"
 
     def __init__(self, driver):
         self.driver = driver
