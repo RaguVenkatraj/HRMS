@@ -3,9 +3,15 @@ pipeline {
 
     stages {
 
+        stage('Check Python') {
+            steps {
+                bat 'python --version'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
-                bat 'pip install -r requirements.txt'
+                bat 'python -m pip install -r requirements.txt'
             }
         }
 
