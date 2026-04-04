@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3909","Login with credentials -- @1.3 ","","Fri Mar 13 12:10:31 IST 2026","passed","Fri Mar 13 12:10:35 IST 2026","","","",""
+"","5525","Login with credentials -- @1.1 ","","Fri Mar 13 12:10:21 IST 2026","passed","Fri Mar 13 12:10:26 IST 2026","","","",""
+"","4068","Login with credentials -- @1.4 ","","Fri Mar 13 12:10:35 IST 2026","passed","Fri Mar 13 12:10:39 IST 2026","","","",""
+"","4254","Login with credentials -- @1.2 ","","Fri Mar 13 12:10:26 IST 2026","passed","Fri Mar 13 12:10:31 IST 2026","","","",""
