@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Verify Python') {
+        stage('Check Python') {
             steps {
                 bat 'python --version'
             }
@@ -17,9 +17,16 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'python -m behave'
+                bat 'behave -f allure_behave.formatter:AllureFormatter -o allure-results'
             }
         }
 
+        stage('Generate Allure Report') {
+            steps {
+                allure includeProperties: false,
+                       jdk: '',
+                       results: [[path: 'allure-results']]
+            }
+        }
     }
 }
