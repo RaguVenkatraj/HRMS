@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Verify Python') {
+            steps {
+                bat 'python --version'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 bat 'python -m pip install -r requirements.txt'
@@ -14,8 +20,6 @@ pipeline {
                 bat 'python -m behave'
             }
         }
-    }
-}
-        }
+
     }
 }
