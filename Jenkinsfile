@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    
+
     triggers {
-        cron('0 22 * * *')   // Runs daily at exactly 10:00 PM
+        cron('0 22 * * *')   // Runs daily at 10:00 PM
     }
 
     stages {
@@ -27,16 +27,15 @@ pipeline {
 
         stage('Generate Allure Report') {
             steps {
-                allure(
-                    commandline: 'allure',
+                allure([
                     includeProperties: false,
                     results: [[path: 'allure-results']]
-                )
+                ])
             }
         }
     }
-}
-post {
+
+    post {
         always {
             emailext(
                 subject: "Build ${currentBuild.currentResult}: ${env.JOB_NAME}",
