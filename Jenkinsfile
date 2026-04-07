@@ -36,3 +36,20 @@ pipeline {
         }
     }
 }
+post {
+        always {
+            emailext(
+                subject: "Build ${currentBuild.currentResult}: ${env.JOB_NAME}",
+                body: """
+                Build Status: ${currentBuild.currentResult}
+                Job Name: ${env.JOB_NAME}
+                Build Number: ${env.BUILD_NUMBER}
+
+                Check Allure Report:
+                ${env.BUILD_URL}allure/
+                """,
+                to: "vraghupathy@trellissoft.ai"
+            )
+        }
+    }
+}
