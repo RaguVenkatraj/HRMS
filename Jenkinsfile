@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     triggers {
-        cron('*/5 * * * *')   // Runs daily at 10:00 PM
+        cron('H 22 * * 5')   // 
     }
 
     stages {
